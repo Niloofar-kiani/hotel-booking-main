@@ -173,9 +173,7 @@ height: 60px;
   }
 }
 .booking-navbar-light {
-  //background: transparent !important;
   position: absolute;
-  //top: 20px;
   left: 0;
   right: 0;
   z-index: 3;
@@ -305,12 +303,53 @@ right: 0;
   background-color: #c5a880 !important;
 }
 .footer{
-  height: 200px;
+  height: 300px;
   position: relative;
-  bottom: 0;
+  bottom: 15px;
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: flex-end;
+  background-color: #010101 !important;
+  margin:15px;
+  padding-bottom: 15px;
+  border-radius: 15px;
+  .footer-wrapper{
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    .footer-content{
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      align-items: center;
+    .footer-brand{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      color:#dedede;
+      .footer-logo{
+        font-family: 'Dancing Script', cursive !important;
+        font-size: 40px;
+  
+      }
+      .footer-sub{
+        font-size: 12px;
+        margin-top:-10px;
+        text-decoration: none;
+  
+      }
+      .footer-icons{
+        a{
+          color:#c49b66
+        }
+      }
+    }
+  }
+  }
 }
 
 .login-div{

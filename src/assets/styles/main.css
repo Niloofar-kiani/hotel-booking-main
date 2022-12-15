@@ -360,13 +360,81 @@
 }
 
 .footer {
-  height: 200px;
+  height: 300px;
   position: relative;
-  bottom: 0;
+  bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #010101 !important;
+  margin: 15px;
+  padding-bottom: 15px;
+  border-radius: 15px;
+}
+
+.footer .footer-wrapper {
+  height: 300px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.footer .footer-wrapper .footer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .footer-wrapper .footer-content .footer-brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  color: #dedede;
+}
+
+.footer .footer-wrapper .footer-content .footer-brand .footer-logo {
+  font-family: 'Dancing Script', cursive !important;
+  font-size: 40px;
+}
+
+.footer .footer-wrapper .footer-content .footer-brand .footer-sub {
+  font-size: 12px;
+  margin-top: -10px;
+  text-decoration: none;
+}
+
+.footer .footer-wrapper .footer-content .footer-brand .footer-icons a {
+  color: #c49b66;
 }
 
 .login-div {
