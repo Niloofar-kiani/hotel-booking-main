@@ -1,0 +1,101 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+.vh-85 {
+  height: 85vh;
+}
+
+.top-30 {
+  top: 30px;
+}
+
+.vh-50 {
+  height: 50vh;
+}
+
+
+.pointer {
+  cursor: pointer;
+}
+
+.spinner-custom {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+
+/* Home Banner */
+.home-top{
+  position: relative;
+  margin: 15px 15px 0 15px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.home-banner {
+  margin-bottom: 30px;
+  height: 100vh;
+  overflow: hidden;
+  background-image:linear-gradient(rgba(0, 0, 0, 100), rgba(0, 0, 0, 0)),url(./assets/images/home-bg.jpg);
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  z-index: 0;
+  
+}
+.home-hero{
+  position: absolute;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  top:calc(50vh - 80px);
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  color: white;
+  text-align:center;
+}
+.white-text{
+  color: white;
+}
+.hero-text{
+  font-family: 'Old Standard TT', serif!important;
+}
+
+
+/* Hotel Banner */
+.hotel-top{
+  position: relative;
+}
+.hotel-banner {
+  margin-bottom: 30px;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url(https://theasiacollective.com/wp-content/uploads/2019/10/81319035.jpg);
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  z-index: 0;
+  
+}
+.hotel-hero{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  top: calc(50vh - 80px);
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  color: white;
+  background-color: rgb(34 34 34 / 68%);
+  text-align: center;
+}
+
