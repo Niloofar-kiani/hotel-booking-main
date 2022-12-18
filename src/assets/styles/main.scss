@@ -6,6 +6,9 @@
   .h2{
     font-size: 34px;
   }
+  .m-2{
+    margin: 0.7rem !important;
+  }
   .hotel-banner{
     // border-top-left-radius:15px ;
     // border-top-right-radius: 15px;
@@ -51,6 +54,10 @@
     border-top-left-radius:15px ;
     border-top-right-radius: 15px;
     margin:15px 15px 30px;
+  }
+  .m-2{
+    margin-left: -0.7rem !important;
+    margin-top: 1.9rem !important;
   }
   .search-bar{
     top:calc(100vh - 80px);
@@ -128,6 +135,7 @@ height: 60px;
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
+
 
 .container{
   .row .hotel-card{
