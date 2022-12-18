@@ -43,11 +43,11 @@ const UserInfo = () => {
             <div className="d-flex gap-3">
               <Image
                 className="user-image"
-                src={`https://avatars.dicebear.com/api/avataaars/${user.name}.svg?mood[]=happy`}
+                src={`https://avatars.dicebear.com/api/big-smile/${user.name}.svg?mood[]=happy&mood[]=sad`}
               />
 
               <div>
-                <h4>{user.name}</h4>
+                <h4 className='h4-style'>{user.name}</h4>
                 <small>{user.email}</small> <br />
                 <small>{`Joined ${moment(user.createdAt).fromNow()}`}</small>
               </div>

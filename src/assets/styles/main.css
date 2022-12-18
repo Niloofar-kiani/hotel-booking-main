@@ -361,6 +361,10 @@
   margin-bottom: 1.5rem !important;
 }
 
+.h4-style {
+  text-transform: capitalize;
+}
+
 .subheader {
   margin-top: 100px;
   text-align: center;

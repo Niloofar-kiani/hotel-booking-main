@@ -294,7 +294,6 @@ height: 60px;
 .search-btn-div{
   padding: 0;
   .search-btn{
-    //margin-top:27px;
     width: 100%;
     background-color: #c5a880;
     text-transform: uppercase;
@@ -311,6 +310,9 @@ height: 60px;
   text-align: center;
   font-family: 'Old Standard TT', serif !important;
  margin-bottom: 1.5rem !important;
+}
+.h4-style{
+  text-transform: capitalize;
 }
 .subheader{
   margin-top: 100px;
