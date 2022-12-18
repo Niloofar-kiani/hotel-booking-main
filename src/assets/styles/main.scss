@@ -1,9 +1,22 @@
+//mobile
 @media (max-width: 992px) {
   .booking-navbar-light{
     background: #222222;
   }
+  .h2{
+    font-size: 34px;
+  }
+  .hotel-banner{
+    // border-top-left-radius:15px ;
+    // border-top-right-radius: 15px;
+    margin-bottom:30px;
+  }
+  .search-bar{
+    top:calc(100vh - 220px);
+  }
   .search-btn{
     padding: 25px 20px;
+    margin-top:15px;
   }
   .hero-text{
     font-size: 35px;
@@ -20,13 +33,31 @@
   .dashboard, .add-hotel, .edit-hotel{
     visibility: hidden;
   }
+  .footer{
+    margin:0;
+    padding-bottom: 0;
+    border-radius: 0;
+  }
 }
+//Desktop
 @media (min-width: 992px) {
   .booking-navbar-light{
     background: transparent !important;
   }
+  .h2{
+    font-size: 64px;
+  }
+  .hotel-banner{
+    border-top-left-radius:15px ;
+    border-top-right-radius: 15px;
+    margin:15px 15px 30px;
+  }
+  .search-bar{
+    top:calc(100vh - 80px);
+  }
   .search-btn{
     padding: 48px 24px;
+    margin-top:0;
   }
   .hero-text{
     font-size: 60px;
@@ -34,8 +65,11 @@
   .navbar-brand{
     color: white;
   }
-
-
+  .footer{
+    margin:15px;
+    padding-bottom: 15px;
+    border-radius: 15px;
+  }
 }
 *{
   font-family: 'Nunito', sans-serif !important;
@@ -86,9 +120,13 @@ height: 60px;
     background: #c49b66 !important;
   }
 }
+.edit-btn{
+  margin-bottom: 15px;
+}
 .img-single-hotel{
   height: 200px;
-  background-size: contain;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
 }
 
 .container{
@@ -219,11 +257,11 @@ height: 60px;
   width: 90%;
   //padding: 15px 20px;
   background-color: #222222;
-  top:calc(100vh - 80px);
+  
   margin-left: auto;
-margin-right: auto;
-left: 0;
-right: 0;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 
 .search-el{
   flex-direction: column;
@@ -259,11 +297,9 @@ right: 0;
 }
 }
 .h2{
-  font-size: 64px;
   font-weight: 400;
   line-height: 1.4;
   color: rgba(0, 0, 0, 0.8);
-
   text-align: center;
   font-family: 'Old Standard TT', serif !important;
  margin-bottom: 1.5rem !important;
@@ -310,9 +346,7 @@ right: 0;
   align-items: center;
   justify-content: center;
   background-color: #010101 !important;
-  margin:15px;
-  padding-bottom: 15px;
-  border-radius: 15px;
+ 
   .footer-wrapper{
     height: 300px;
     overflow: hidden;
@@ -323,6 +357,7 @@ right: 0;
     width: 100%;
     .footer-content{
       display: flex;
+      flex-wrap: wrap;
       width: 100%;
       justify-content: space-around;
       align-items: center;
@@ -348,6 +383,9 @@ right: 0;
         }
       }
     }
+    .footer-cert{
+      margin-top:15px;
+    }
   }
   }
 }
@@ -360,6 +398,8 @@ right: 0;
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
+  margin:15px;
+  border-radius: 15px;
   .login-section{
     width: 100vw;
     height: 100vh;
@@ -406,6 +446,8 @@ right: 0;
   background-repeat: no-repeat;
   background-position: right center;
   background-attachment: fixed;
+  margin:15px;
+  border-radius: 15px;
   .login-section{
     width: 100vw;
     height: 100vh;
@@ -427,6 +469,34 @@ right: 0;
         align-items: flex-start;
 
       }
+    }
+  }
+}
+.subheader-hotel svg{
+  margin-right:5px;
+}
+.subheading svg{
+  margin-right:5px;
+}
+p svg{
+  margin-right:5px;
+}
+.ant-picker{
+  padding: 6px 12px 7px !important;
+  border-radius: .375rem !important;
+  input{
+    font-size: 16px !important;
+    &::placeholder{
+    color:#808080 !important;
+    }
+  }
+}
+.ant-space{
+  .ant-space-item{
+    height: 40px !important;
+    .error{
+      color:#d10f0f !important;
+      font-size: 12px !important;
     }
   }
 }

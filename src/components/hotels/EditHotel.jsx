@@ -9,12 +9,13 @@ import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import { useLocation } from 'react-router-dom';
 import ReactGoogleAutocomplete from 'react-google-autocomplete';
+import Spinner from 'react-bootstrap/Spinner';
 
 const { RangePicker } = DatePicker;
 
 const EditHotel = () => {
   const location = useLocation();
-
+  const [loading, setLoading] = useState(false);
   const [locationValue, setLocationValue] = useState('');
   const { auth } = useSelector((state) => ({ ...state }));
   const { token } = auth;
@@ -49,6 +50,7 @@ const EditHotel = () => {
   };
 
   const handleSubmit = async (e) => {
+    setLoading(true);
     e.preventDefault();
 
     try {
@@ -64,8 +66,10 @@ const EditHotel = () => {
 
       const res = await updateHotel(token, formData, location.state.id);
       toast.success('Hotel is updated!');
+      setLoading(false);
     } catch (err) {
       console.log(err);
+      setLoading(false);
     }
   };
 
@@ -114,6 +118,7 @@ const EditHotel = () => {
                   <Form.Control
                     name="content"
                     as="textarea"
+                    rows="10"
                     value={values.content}
                     onChange={handleChange}
                   />
@@ -150,32 +155,35 @@ const EditHotel = () => {
                     value={values.bed}
                     onChange={handleChange}
                   >
-                 
                     <option value={1}>1</option>
                     <option value={2}>2</option>
                     <option value={3}>3</option>
                     <option value={4}>4</option>
                   </Form.Select>
                 </Form.Group>
-
-                <RangePicker
-                  className="mb-3 w-100"
-                  onChange={(date, dateString) => {
-                    setValues({
-                      ...values,
-                      from: dateString[0],
-                      to: dateString[1],
-                    });
-                  }}
-                  defaultValue={[
-                    moment(values.from, 'YYYY-MM-DD'),
-                    moment(values.to, 'YYYY-MM-DD'),
-                  ]}
-                  format="YYYY-MM-DD"
-                />
-
+                <Form.Group className="mb-3">
+                  <Form.Label>Select date</Form.Label>
+                  <RangePicker
+                    className="mb-3 w-100"
+                    onChange={(date, dateString) => {
+                      setValues({
+                        ...values,
+                        from: dateString[0],
+                        to: dateString[1],
+                      });
+                    }}
+                    defaultValue={[
+                      moment(values.from, 'YYYY-MM-DD'),
+                      moment(values.to, 'YYYY-MM-DD'),
+                    ]}
+                    format="YYYY-MM-DD"
+                  />
+                </Form.Group>
                 <div>
-                  <Button variant="primary" type="submit">
+                  <Button className="edit-btn" variant="primary" type="submit">
+                    {loading && (
+                      <Spinner animation="border" className="spinner-custom" />
+                    )}
                     Save
                   </Button>
                 </div>

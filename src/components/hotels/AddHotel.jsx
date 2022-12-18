@@ -7,6 +7,7 @@ import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import { DatePicker } from 'antd';
 import ReactGoogleAutocomplete from 'react-google-autocomplete';
+import Spinner from 'react-bootstrap/Spinner';
 
 const { RangePicker } = DatePicker;
 const initialState = {
@@ -28,6 +29,7 @@ const AddHotel = () => {
   const [values, setValues] = useState(initialState);
   const [location, setLocation] = useState('');
   const [preview, setPreview] = useState(initialImage);
+  const [loading, setLoading] = useState(false);
 
   const handleImageChange = (e) => {
     setPreview(URL.createObjectURL(e.target.files[0]));
@@ -39,6 +41,8 @@ const AddHotel = () => {
   };
 
   const handleSubmit = async (e) => {
+    setLoading(true);
+
     e.preventDefault();
 
     try {
@@ -57,10 +61,11 @@ const AddHotel = () => {
       setValues(initialState);
       setPreview(initialImage);
       setLocation('');
+      setLoading(false);
     } catch (err) {
       toast.error(err);
+      setLoading(false);
     }
-    console.log(values);
   };
   return (
     <>
@@ -103,6 +108,7 @@ const AddHotel = () => {
                 <Form.Control
                   name="content"
                   as="textarea"
+                  rows="10"
                   value={values.content}
                   onChange={handleChange}
                 />
@@ -137,27 +143,31 @@ const AddHotel = () => {
                   value={values.bed}
                   onChange={handleChange}
                 >
-                
                   <option value={1}>1</option>
                   <option value={2}>2</option>
                   <option value={3}>3</option>
                   <option value={4}>4</option>
                 </Form.Select>
               </Form.Group>
-
-              <RangePicker
-                className="mb-3 w-100"
-                onChange={(date, dateString) => {
-                  setValues({
-                    ...values,
-                    from: dateString[0],
-                    to: dateString[1],
-                  });
-                }}
-                format="YYYY-MM-DD"
-              />
+              <Form.Group className="mb-3">
+                <Form.Label>Select date</Form.Label>
+                <RangePicker
+                  className="mb-3 w-100"
+                  onChange={(date, dateString) => {
+                    setValues({
+                      ...values,
+                      from: dateString[0],
+                      to: dateString[1],
+                    });
+                  }}
+                  format="YYYY-MM-DD"
+                />
+              </Form.Group>
               <div>
-                <Button variant="primary" type="submit">
+                <Button className="edit-btn" variant="primary" type="submit">
+                  {loading && (
+                    <Spinner animation="border" className="spinner-custom" />
+                  )}
                   Save
                 </Button>
               </div>

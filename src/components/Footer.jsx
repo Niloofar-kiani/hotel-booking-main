@@ -12,18 +12,17 @@ const Footer = () => {
             <span className="footer-logo">Luxe</span>
             <span className="footer-sub">hotel booking</span>
             <div className="mt-3 footer-icons">
-              <a href='https://www.instagram.com/'>
-              <FiInstagram />
+              <a href="https://www.instagram.com/">
+                <FiInstagram />
               </a>
-              <a href='https://www.facebook.com/'>
-              <FiFacebook className="ms-2" />
+              <a href="https://www.facebook.com/">
+                <FiFacebook className="ms-2" />
               </a>
-              <a href='https://www.twitter.com/'>
-              <FiTwitter className="ms-2" />
-             </a>
+              <a href="https://www.twitter.com/">
+                <FiTwitter className="ms-2" />
+              </a>
             </div>
           </div>
-
           <div>
             <div>
               <h5 className="text-white ">Contact Us:</h5>
@@ -35,8 +34,7 @@ const Footer = () => {
               <FiMail /> book@luxe.co
             </div>
           </div>
-
-          <div>
+          <div className='footer-cert'>
             <img
               decoding="async"
               loading="lazy"
@@ -49,7 +47,7 @@ const Footer = () => {
         </div>
         <div className="text-muted">
           www.luxe-booking.com
-          <p>  Copyright ©  Niloofar  | All Rights Reserved!</p>
+          <p> Copyright © Niloofar | All Rights Reserved!</p>
         </div>
       </div>
     </div>

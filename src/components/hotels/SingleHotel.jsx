@@ -122,7 +122,7 @@ const SingleHotel = () => {
                 <div className="col-md-6">
                   <div className="">
                     <div
-                      className="-single-hotel w-100 mb-md-4"
+                      className="img-single-hotel w-100 mb-md-4"
                       style={{
                         backgroundImage: `url('${special}')`,
                       }}
@@ -130,7 +130,11 @@ const SingleHotel = () => {
                     <div className="text w-100 p-4 text-center single-hotel-side">
                       <div className="icon">
                         <span>
-                          <img className="badge-icon mb-3" src={badge} alt='badge'/>
+                          <img
+                            className="badge-icon mb-3"
+                            src={badge}
+                            alt="badge"
+                          />
                         </span>
                       </div>
                       <h3>Special Offers</h3>
